@@ -26,4 +26,5 @@ public class BoardSelectResponseDto {
                 .boardName(boardSelectResponseVo.getBoardName())
                 .build();
     }
+
 }

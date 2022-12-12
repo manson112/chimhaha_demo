@@ -29,5 +29,9 @@ public class Board extends BaseEntity {
     public Board() {
     }
 
-
+    public Board(Long id, String name, List<CategoryBoard> categoryBoards) {
+        this.id = id;
+        this.name = name;
+        this.categoryBoards = categoryBoards;
+    }
 }

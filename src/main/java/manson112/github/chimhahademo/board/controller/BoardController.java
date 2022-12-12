@@ -35,7 +35,7 @@ public class BoardController {
 
     @GetMapping("/category/v1")
     public ResponseEntity<List<CategorySelectResponseDto>> retrieveAllCategories() {
-        return new ResponseEntity<>(boardService.retrieveAllCategories(), HttpStatus.OK);
+        return new ResponseEntity<>(boardService.retrieveAllCategories().stream().map(CategorySelectResponseDto::from).collect(Collectors.toList()), HttpStatus.OK);
     }
 
 

@@ -6,6 +6,7 @@ import manson112.github.chimhahademo.board.dto.create.BoardSelectResponseVo;
 import manson112.github.chimhahademo.board.entity.Board;
 import manson112.github.chimhahademo.board.repository.BoardRepository;
 import manson112.github.chimhahademo.category.dto.CategorySelectResponseDto;
+import manson112.github.chimhahademo.category.dto.CategorySelectResponseVo;
 import manson112.github.chimhahademo.category.entity.Category;
 import manson112.github.chimhahademo.category.entity.CategoryBoard;
 import manson112.github.chimhahademo.category.repository.CategoryBoardRepository;
@@ -47,8 +48,8 @@ public class BoardService {
         return boardRepository.findAll().stream().map(BoardSelectResponseVo::from).collect(Collectors.toList());
     }
 
-    public List<CategorySelectResponseDto> retrieveAllCategories() {
-        return categoryRepository.findAll().stream().map(CategorySelectResponseDto::from).collect(Collectors.toList());
+    public List<CategorySelectResponseVo> retrieveAllCategories() {
+        return categoryRepository.findAll().stream().map(CategorySelectResponseVo::from).collect(Collectors.toList());
     }
 
 }
